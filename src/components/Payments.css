@@ -1,0 +1,32 @@
+.payments {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-base);
+}
+
+.payments__item {
+  padding: 0 var(--size-base) var(--size-base);
+  font-size: var(--font-size-m);
+  border-bottom: 1px solid var(--color-txt-highlight);
+}
+
+.payments__item--rtl {
+  text-align: right;
+}
+
+.payments__item:last-child {
+  border-bottom: 0;
+}
+
+
+.payments__info,
+.payments__data {
+  display: grid;
+  gap: var(--size-base);
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.payments__info {
+  font-weight: bold;
+  margin-bottom: var(--size-base);
+}

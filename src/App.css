@@ -1,38 +1,78 @@
-.App {
+.app__header {
+  padding: var(--size-base-3x) 0;
+  border-bottom: 1px solid var(--color-primary);
+  background-color: var(--color-bg-primary);
+}
+
+.app__title {
+  font-size: var(--font-size-2xl);
+  color: var(--color-txt-primary);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app__subtitle {
+  font-size: var(--font-size-l);
+  color: var(--color-txt-highlight);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app__wrapper {
+  padding: var(--size-base-6x) 0;
+  border-bottom: 1px solid #6cb4b8;
+  background-color: var(--color-bg-secondary);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app__inner {
+  display: grid;
+  gap: var(--size-base-6x);
+  grid-template-columns: repeat(2, 1fr);
+  max-width: var(--max-width-md);
+  margin: 0 auto;
+}
+
+.app__inner-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--size-base-4x);
+}
+
+/* MODAL */
+.modal {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal__inner {
+  width: 100%;
+  max-width: var(--max-width-xs);
+  padding: var(--size-base-3x) var(--size-base-6x);
+  border: 2px solid var(--color-primary);
+  border-radius: 10px;
+  background-color: var(--color-bg-primary);
+}
+
+/* FORM */
+.form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: var(--size-base-2x);
+  max-width: 320px;
+  margin: 0 auto;
 }
 
-.App-link {
-  color: #61dafb;
+.form__label {
+  display: block;
+  font-size: var(--font-size-m);
+  font-weight: semi-bold;
+  margin-bottom: var(--size-base)
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form__input {
+  width: 100%;
 }

@@ -1,0 +1,39 @@
+{
+  "results": [
+    {
+      "name": "Chicho",
+      "payments": [
+        {
+          "amount": 59.25,
+          "created": "2023-03-01T14:38:06.644096Z",
+          "description": "Cena"
+        },
+        {
+          "amount": 29.83,
+          "created": "2023-03-01T21:38:06.644096Z",
+          "description": "Bolos"
+        }
+      ]
+    },
+    {
+      "name": "Nano",
+      "payments": [
+        {
+          "amount": 24.50,
+          "created": "2023-03-02T20:15:06.644096Z",
+          "description": "Cine"
+        }
+      ]
+    },
+    {
+      "name": "Cani",
+      "payments": [
+        {
+          "amount": 15.60,
+          "created": "2023-03-05T20:30:06.644096Z",
+          "description": "Palomitas"
+        }
+      ]
+    }
+  ]
+}
