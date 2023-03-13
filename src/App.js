@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import payments from './mock.json'
+import { getSessionStorage, setSessionStorage } from './helpers/storage'
 import Payments from './components/Payments'
 import Balance from './components/Balance'
 import ModalFriend from './components/ModalFriend'
@@ -9,12 +10,17 @@ import ModalExpense from './components/ModalExpense'
 function App () {
   const [addFriend, setAddFriend] = useState(false)
   const [addExpense, setAddExpense] = useState(false)
-  const [paymentsList, setPaymentsList] = useState(payments.results)
+  const [paymentsList, setPaymentsList] = useState(() => {
+    const storagedPayments = getSessionStorage('payments')
+    if (storagedPayments) return JSON.parse(storagedPayments)
+    return payments.results
+  })
 
   const handleAddFriend = newName => {
     const newList = [...paymentsList]
     newList.push({ name: newName, payments: [] })
     setPaymentsList(newList)
+    setSessionStorage('payments', JSON.stringify(newList))
     setAddFriend(false)
   }
 
@@ -27,6 +33,7 @@ function App () {
       description: newExpense.description
     })
     setPaymentsList(newList)
+    setSessionStorage('payments', JSON.stringify(newList))
     setAddExpense(false)
   }
 
