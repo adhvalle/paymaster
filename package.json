@@ -18,7 +18,10 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": "./node_modules/standard/eslintrc.json"
+    "extends": "./node_modules/standard/eslintrc.json",
+    "env": {
+      "jest": true
+    }
   },
   "browserslist": {
     "production": [
@@ -34,5 +37,8 @@
   },
   "devDependencies": {
     "standard": "^17.0.0"
+  },
+  "standard": {
+    "env": [ "jest" ]
   }
 }
