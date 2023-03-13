@@ -24,6 +24,7 @@ function ModalExpense ({ showModal, payments, closeModal, addExpense }) {
 
   const handleSubmit = event => {
     event.preventDefault()
+    if (!name || !amount || !description) return false
     addExpense({
       name,
       amount,
@@ -48,6 +49,7 @@ function ModalExpense ({ showModal, payments, closeModal, addExpense }) {
           <div>
             <label className='form__label'>Amigo</label>
             <select onChange={handleSelectName}>
+              <option value=''>-</option>
               {
                 payments.map(({ name }) => (
                   <option value={name} key={name}>{name}</option>

@@ -17,5 +17,5 @@ export const humanizeDateDiff = (dateFrom = '') => {
   const startDate = dateFrom ? new Date(dateFrom) : new Date()
   const endDate = new Date()
   const days = dayDiff(endDate, startDate)
-  return `hace ${days.toFixed()} días`
+  return days.toFixed() === '0' ? 'Hoy' : `hace ${days.toFixed()} días`
 }
