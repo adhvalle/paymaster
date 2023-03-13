@@ -1,5 +1,6 @@
 import './Balance.css'
 
+import { formatCurrency } from '../helpers/currencies'
 import { getTotalBalance, getPaymentsByUser } from '../utils/payments'
 
 function BalanceItem ({ name, total, totalExpenses }) {
@@ -11,7 +12,7 @@ function BalanceItem ({ name, total, totalExpenses }) {
   return (
     <div className='balance__item'>
       <span>{name}</span>
-      <span className={resultClassName}>{totalExpended}</span>
+      <span className={resultClassName}>{formatCurrency(totalExpended)}</span>
     </div>
   )
 }

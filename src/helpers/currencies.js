@@ -3,4 +3,4 @@
  * @param {Number} number
  * @returns {String}
  */
-export const formatCurrency = number => `${number}€`
+export const formatCurrency = number => new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR' }).format(number)
