@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`It should render the component 1`] = `
+<div
+  class="modal"
+  data-testid="modal"
+>
+  <div
+    class="modal__inner"
+  >
+    <form
+      class="form"
+    >
+      <div>
+        <label
+          class="form__label"
+        >
+          Nombre
+        </label>
+        <input
+          class="form__input"
+          type="text"
+          value=""
+        />
+      </div>
+      <button>
+        Añadir
+      </button>
+    </form>
+  </div>
+</div>
+`;

@@ -43,7 +43,10 @@ function App () {
   }
 
   return (
-    <main className='app'>
+    <main
+      className='app'
+      data-testid='app'
+    >
       <header className='app__header'>
         <h1 className='app__title'>PAGADOR</h1>
       </header>

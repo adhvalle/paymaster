@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`It should render the component 1`] = `
+<div
+  class="modal"
+  data-testid="modal"
+>
+  <div
+    class="modal__inner"
+  >
+    <form
+      class="form"
+    >
+      <div>
+        <label
+          class="form__label"
+        >
+          Amigo
+        </label>
+        <select>
+          <option
+            value=""
+          >
+            -
+          </option>
+          <option
+            value="test name"
+          >
+            test name
+          </option>
+        </select>
+      </div>
+      <div>
+        <label
+          class="form__label"
+        >
+          Gasto
+        </label>
+        <input
+          class="form__input"
+          data-testid="number"
+          type="number"
+          value="0"
+        />
+      </div>
+      <div>
+        <label
+          class="form__label"
+        >
+          Descripción
+        </label>
+        <input
+          class="form__input"
+          type="text"
+          value=""
+        />
+      </div>
+      <button>
+        Añadir
+      </button>
+    </form>
+  </div>
+</div>
+`;

@@ -12,12 +12,14 @@ function ModalFriend ({ showModal, closeModal, addFriend }) {
 
   const handleSubmit = event => {
     event.preventDefault()
+    if (!name) return false
     addFriend(name)
   }
 
   return (
     <div
       className='modal'
+      data-testid='modal'
       onClick={closeModal}
     >
       <div

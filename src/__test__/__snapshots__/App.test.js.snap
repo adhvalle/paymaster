@@ -1,0 +1,210 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`It should render the component 1`] = `
+<main
+  class="app"
+  data-testid="app"
+>
+  <header
+    class="app__header"
+  >
+    <h1
+      class="app__title"
+    >
+      PAGADOR
+    </h1>
+  </header>
+  <section
+    class="app__wrapper"
+  >
+    <div
+      class="app__inner"
+    >
+      <section>
+        <div
+          class="app__inner-header"
+        >
+          <h2
+            class="app__subtitle"
+          >
+            Balance
+          </h2>
+          <button>
+            Añadir amigo
+          </button>
+        </div>
+        <div
+          class="balance"
+        >
+          <div
+            class="balance__item"
+          >
+            <span>
+              Chicho
+            </span>
+            <span
+              class="balance__amount"
+            >
+              46,02 €
+            </span>
+          </div>
+          <div
+            class="balance__item"
+          >
+            <span>
+              Nano
+            </span>
+            <span
+              class="balance__amount balance__amount--negative"
+            >
+              -18,56 €
+            </span>
+          </div>
+          <div
+            class="balance__item"
+          >
+            <span>
+              Cani
+            </span>
+            <span
+              class="balance__amount balance__amount--negative"
+            >
+              -27,46 €
+            </span>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div
+          class="app__inner-header"
+        >
+          <h2
+            class="app__subtitle"
+          >
+            Gastos
+          </h2>
+          <button>
+            Añadir gasto
+          </button>
+        </div>
+        <div
+          class="payments"
+        >
+          <div
+            class="payments__item"
+          >
+            <div
+              class="payments__info"
+            >
+              <p>
+                Cani
+              </p>
+              <p
+                class="payments__item--rtl"
+              >
+                15,60 €
+              </p>
+            </div>
+            <div
+              class="payments__data"
+            >
+              <p>
+                Palomitas
+              </p>
+              <p
+                class="payments__item--rtl"
+              >
+                hace 9 días
+              </p>
+            </div>
+          </div>
+          <div
+            class="payments__item"
+          >
+            <div
+              class="payments__info"
+            >
+              <p>
+                Nano
+              </p>
+              <p
+                class="payments__item--rtl"
+              >
+                24,50 €
+              </p>
+            </div>
+            <div
+              class="payments__data"
+            >
+              <p>
+                Cine
+              </p>
+              <p
+                class="payments__item--rtl"
+              >
+                hace 12 días
+              </p>
+            </div>
+          </div>
+          <div
+            class="payments__item"
+          >
+            <div
+              class="payments__info"
+            >
+              <p>
+                Chicho
+              </p>
+              <p
+                class="payments__item--rtl"
+              >
+                29,83 €
+              </p>
+            </div>
+            <div
+              class="payments__data"
+            >
+              <p>
+                Bolos
+              </p>
+              <p
+                class="payments__item--rtl"
+              >
+                hace 13 días
+              </p>
+            </div>
+          </div>
+          <div
+            class="payments__item"
+          >
+            <div
+              class="payments__info"
+            >
+              <p>
+                Chicho
+              </p>
+              <p
+                class="payments__item--rtl"
+              >
+                59,25 €
+              </p>
+            </div>
+            <div
+              class="payments__data"
+            >
+              <p>
+                Cena
+              </p>
+              <p
+                class="payments__item--rtl"
+              >
+                hace 13 días
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+</main>
+`;

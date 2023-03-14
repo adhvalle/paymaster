@@ -1,9 +1,21 @@
-import { render, screen } from '@testing-library/react'
+import { render, screen, fireEvent, waitFor } from '@testing-library/react'
 import App from '../App'
 
-test('It should has title content', () => {
+beforeEach(() => {
   render(<App />)
+})
 
-  const title = screen.getByText(/PAGADOR/i)
-  expect(title).toBeInTheDocument()
+test('It should render the component', () => {
+  const app = screen.getByTestId('app')
+  expect(app).toMatchSnapshot()
+})
+
+test('It should open ModalFriend', async () => {
+  fireEvent.click(screen.getByText('Añadir amigo'))
+  await waitFor(() => expect(screen.getByText('Nombre')).toBeInTheDocument())
+})
+
+test('It should open ModalExpense', async () => {
+  fireEvent.click(screen.getByText('Añadir gasto'))
+  await waitFor(() => expect(screen.getByText('Amigo')).toBeInTheDocument())
 })

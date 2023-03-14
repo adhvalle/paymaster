@@ -36,6 +36,7 @@ function ModalExpense ({ showModal, payments, closeModal, addExpense }) {
   return (
     <div
       className='modal'
+      data-testid='modal'
       onClick={closeModal}
     >
       <div
@@ -61,6 +62,7 @@ function ModalExpense ({ showModal, payments, closeModal, addExpense }) {
             <label className='form__label'>Gasto</label>
             <input
               className='form__input'
+              data-testid='number'
               type='number'
               value={amount}
               onChange={handleAmount}
