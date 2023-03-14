@@ -7,20 +7,26 @@ import Balance from './components/Balance'
 import ModalFriend from './components/ModalFriend'
 import ModalExpense from './components/ModalExpense'
 
+const PAYMENTS_KEY = 'payments'
+
 function App () {
   const [addFriend, setAddFriend] = useState(false)
   const [addExpense, setAddExpense] = useState(false)
   const [paymentsList, setPaymentsList] = useState(() => {
-    const storagedPayments = getSessionStorage('payments')
+    const storagedPayments = getSessionStorage(PAYMENTS_KEY)
     if (storagedPayments) return JSON.parse(storagedPayments)
     return payments.results
   })
 
+  const _setNewData = data => {
+    setPaymentsList(data)
+    setSessionStorage(PAYMENTS_KEY, JSON.stringify(data))
+  }
+
   const handleAddFriend = newName => {
     const newList = [...paymentsList]
     newList.push({ name: newName, payments: [] })
-    setPaymentsList(newList)
-    setSessionStorage('payments', JSON.stringify(newList))
+    _setNewData(newList)
     setAddFriend(false)
   }
 
@@ -32,34 +38,33 @@ function App () {
       created: newExpense.created,
       description: newExpense.description
     })
-    setPaymentsList(newList)
-    setSessionStorage('payments', JSON.stringify(newList))
+    _setNewData(newList)
     setAddExpense(false)
   }
 
   return (
-    <div className='app'>
+    <main className='app'>
       <header className='app__header'>
         <h1 className='app__title'>PAGADOR</h1>
       </header>
-      <div className='app__wrapper'>
+      <section className='app__wrapper'>
         <div className='app__inner'>
-          <div>
+          <section>
             <div className='app__inner-header'>
               <h2 className='app__subtitle'>Balance</h2>
               <button onClick={() => setAddFriend(true)}>Añadir amigo</button>
             </div>
             <Balance payments={paymentsList} />
-          </div>
-          <div>
+          </section>
+          <section>
             <div className='app__inner-header'>
               <h2 className='app__subtitle'>Gastos</h2>
               <button onClick={() => setAddExpense(true)}>Añadir gasto</button>
             </div>
             <Payments payments={paymentsList} />
-          </div>
+          </section>
         </div>
-      </div>
+      </section>
 
       <ModalFriend
         showModal={addFriend}
@@ -73,7 +78,7 @@ function App () {
         closeModal={() => setAddExpense(false)}
         addExpense={handleAddExpense}
       />
-    </div>
+    </main>
   )
 }
 
